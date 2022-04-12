@@ -4,6 +4,7 @@ import axios from "axios";
 
 const MainScreen = () => {
   const [hangangData, setHangrangData] = useState({});
+
   axios
     .request({
       url: "https://api.hangang.msub.kr",
@@ -13,7 +14,14 @@ const MainScreen = () => {
       setHangrangData(res.data);
     });
 
-  return <div className={styles.hangang}>{hangangData.temp}℃</div>;
+  return (
+    <div className={styles.containar}>
+      <div className={styles.Hangang}>{hangangData.temp}℃</div>
+      <p>
+        {hangangData.station}에서 {hangangData.time}에 측정된 자료 입니다.
+      </p>
+    </div>
+  );
 };
-
+//https://blog.kakaocdn.net/dn/1VSHF/btrePWoVisg/S02laebW7NKVDCKpMsDnKk/img.jpg
 export default MainScreen;
