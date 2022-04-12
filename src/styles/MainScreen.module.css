@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,4 +31,11 @@ p {
   margin-top: 15px;
   color: #fff;
   background: none;
+=======
+}
+
+.hangang {
+  font-size: 80px;
+  font-weight: 700;
+>>>>>>> main
 }
