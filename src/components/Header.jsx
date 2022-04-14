@@ -7,7 +7,10 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <GiWaterDrop className={styles.icon} />
-        <p>PongDang</p>
+        <div className={styles.text}>
+          <p className={styles.text1}>PongDang</p>
+          <p className={styles.text2}>한강 수온 측정 웹, 퐁당</p>
+        </div>
       </div>
       <div className={styles.contents}>
         <p>Temperature</p>
