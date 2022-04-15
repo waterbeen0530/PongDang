@@ -98,7 +98,7 @@ li .img {
 
 li .img:hover {
   cursor: pointer;
-  /* opacity: 0.4; */
+  opacity: 0.4;
 
   transition: all 0.5s;
 }
@@ -107,7 +107,7 @@ li h1 {
   width: auto;
   height: 40px;
   font-size: 27px;
-  margin-top: 18px;
+  margin-top: 30px;
   color: #000;
   font-weight: 900;
   font-family: "Pretendard-ExtraBold";
