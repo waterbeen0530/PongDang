@@ -9,50 +9,164 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-function BridgeList() {
-  const [list, setList] = useState([
-    "일산대교",
-    "김포대교",
-    "행주대교",
-    "방화대교",
-    "마곡철교",
-    "가양대교",
-    "월드컵대교",
-    "성산대교",
-    "양화대교",
-    "당산철교",
-    "서강대교",
-    "마포대교",
-    "원효대교",
-    "한강철교",
-    "한강대교",
-    "노량대교",
-    "동작대교",
-    "반포대교",
-    "한남대교",
-    "동호대교",
-    "성수대교",
-    "영동대교",
-    "청담대교",
-    "잠실대교",
-    "잠실철교",
-    "올림픽대교",
-    "천호대교",
-    "광진교",
-    "구리암사대교",
-    "강동대교",
-    "고덕대교",
-    "미사대교",
-    "팔당대교",
-  ]);
-}
+const Daegyo = styled.p`
+  width: 270px;
+  height: 70px;
+  padding-right: 24px;
+  color: #000;
+  border-radius: 10px;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #fff;
+`;
+
+const DaegyoList = styled.div`
+  padding: 60px 60px;
+`;
 
 function Bridge() {
+  const [lists, setLists] = useState([
+    {
+      id: 1,
+      text: "일산대교",
+    },
+    {
+      id: 2,
+      text: "김포대교",
+    },
+    {
+      id: 3,
+      text: "행주대교",
+    },
+    {
+      id: 4,
+      text: "방화대교",
+    },
+    {
+      id: 5,
+      text: "마곡철교",
+    },
+    {
+      id: 6,
+      text: "가양대교",
+    },
+    {
+      id: 7,
+      text: "월드컵대교",
+    },
+    {
+      id: 8,
+      text: "성산대교",
+    },
+    {
+      id: 9,
+      text: "양화대교",
+    },
+    {
+      id: 10,
+      text: "당산철교",
+    },
+    {
+      id: 11,
+      text: "서강대교",
+    },
+    {
+      id: 12,
+      text: "마포대교",
+    },
+    {
+      id: 13,
+      text: "원효대교",
+    },
+    {
+      id: 14,
+      text: "한강철교",
+    },
+    {
+      id: 15,
+      text: "한강대교",
+    },
+    {
+      id: 16,
+      text: "노량대교",
+    },
+    {
+      id: 17,
+      text: "동작대교",
+    },
+    {
+      id: 18,
+      text: "반포대교",
+    },
+    {
+      id: 19,
+      text: "한남대교",
+    },
+    {
+      id: 20,
+      text: "동호대교",
+    },
+    {
+      id: 21,
+      text: "성수대교",
+    },
+    {
+      id: 22,
+      text: "영동대교",
+    },
+    {
+      id: 23,
+      text: "청담대교",
+    },
+    {
+      id: 24,
+      text: "잠실대교",
+    },
+    {
+      id: 25,
+      text: "잠실철교",
+    },
+    {
+      id: 26,
+      text: "올림픽대교",
+    },
+    {
+      id: 27,
+      text: "천호대교",
+    },
+    {
+      id: 28,
+      text: "광진교",
+    },
+    {
+      id: 29,
+      text: "구리암사대교",
+    },
+    {
+      id: 30,
+      text: "강동대교",
+    },
+    {
+      id: 31,
+      text: "고덕대교",
+    },
+    {
+      id: 32,
+      text: "미사대교",
+    },
+    {
+      id: 33,
+      text: "팔당대교",
+    },
+  ]);
+
+  const daegyoList = lists.map((list) => <Daegyo>{list.text}</Daegyo>);
+
   return (
     <Container>
-      <div>
-        <p>일산대교</p>
-      </div>
+      <DaegyoList>{daegyoList}</DaegyoList>
     </Container>
   );
 }
