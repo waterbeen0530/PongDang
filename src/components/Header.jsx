@@ -15,6 +15,7 @@ function Header() {
       <div className={styles.contents}>
         <p>Temperature</p>
         <p>explanation</p>
+        <p>Bridge</p>
         <p>developer</p>
       </div>
     </header>
