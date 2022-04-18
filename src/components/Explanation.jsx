@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../styles/Explanation.module.css";
 import { GrSearchAdvanced } from "react-icons/gr";
 
@@ -26,14 +26,20 @@ function Explanation() {
     },
   ]);
 
+  const [isHidden, setIsHidden] = useState(true);
+
   const titleList = titles.map((title) => (
     <li>
       <div
+        onMouseEnter={() => setIsHidden(false)}
+        onMouseLeave={() => setIsHidden(true)}
         className={styles.img}
         style={{ backgroundImage: `url( ${title.poster})` }}
-      >
-        <GrSearchAdvanced className={styles.search} />
-      </div>
+      ></div>
+      <GrSearchAdvanced
+        style={{ opacity: `${isHidden ? "0" : "1"}` }}
+        className={styles.search}
+      />
       <h1>{title.hText}</h1>
       <p>{title.sText}</p>
     </li>
