@@ -1,6 +1,14 @@
 import React, { useState, useRef } from "react";
+import styled from "styled-components";
 import styles from "../styles/Explanation.module.css";
 import { GrSearchAdvanced } from "react-icons/gr";
+
+const Container = styled.div`
+  width: 100%;
+  height: 120%;
+  padding: 120px 120px 0px 120px;
+  background: linear-gradient(#5c7280 30%, #91b5c9);
+`;
 
 function Explanation() {
   const [titles, setTitles] = useState([
@@ -46,7 +54,7 @@ function Explanation() {
   ));
 
   return (
-    <div className={styles.container}>
+    <Container className={styles.cotainer}>
       <div className={styles.contents}>
         <h1>EXPLANATION</h1>
         <p>
@@ -54,7 +62,7 @@ function Explanation() {
         </p>
       </div>
       <ul>{titleList}</ul>
-    </div>
+    </Container>
   );
 }
 
